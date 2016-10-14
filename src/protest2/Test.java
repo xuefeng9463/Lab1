@@ -36,7 +36,7 @@ class simplify//处理多项式进行代值，求导。
 							return n;
 				
 			}
-			//求导运算。
+			//求导运算
 		else if((str.indexOf("!simplify")==-1)&&(str.indexOf("!d/d")!=-1))
 			{ 				
 							String o=new String();
