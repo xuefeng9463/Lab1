@@ -5,6 +5,6 @@ create table author(authoriD char(3),name char(10),age char(3),country char(20))
 insert into book values('10001', '红楼梦','01','2016-1-1','20yuan');
 insert into book values('10002', '骆驼祥子','02','2016-1-2','20yuan');
 insert into book values('10003', '西游记','03','2016-1-3','30yuan');
-insert into author values('01', '曹雪晴','100','明朝');
+insert into author values('');
 insert into author values('02', '老舍','80','中国');
 insert into author values('03', '吴承恩','200','明朝');

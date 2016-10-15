@@ -10,7 +10,7 @@ void getLCS();    ///采用倒推方式求最长公共子序列
 int main()
 {
     int i;
-    printf("please input the first string：\n");
+    printf(" first string：\n");
     gets(a);
     printf("输入第二个字符串：\n");
     gets(b);

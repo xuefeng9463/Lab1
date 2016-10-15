@@ -38,7 +38,7 @@ public class Xfdata {
         
         stat.executeUpdate("");
         stat.executeUpdate("insert into author values('02', '老舍','80','中国')");
-        stat.executeUpdate("insert into author values('03', '吴承恩','200','明朝')");
+     
         
       
        

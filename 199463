@@ -1,0 +1,384 @@
+[33mcommit a3812896ba85fb77172cc8458580ba05ca4de976[m
+Author: xuefeng9463 <3094894243@qq.com>
+Date:   Sat Oct 15 17:20:08 2016 +0800
+
+    step3
+
+[1mdiff --git a/instruction.txt b/instruction.txt[m
+[1mindex 259bdf0..dc330c2 100644[m
+[1m--- a/instruction.txt[m
+[1m+++ b/instruction.txt[m
+[36m@@ -2,9 +2,9 @@[m [mdrop table if exists book;[m
+ drop table if exists author;[m
+ create table book(isbn char(20), title char(20),authorID char(3),publishdate char(20),price char(15));[m
+ create table author(authoriD char(3),name char(10),age char(3),country char(20));[m
+[31m-insert into book values('10001', 'ÎÒµÄ´óÑ§','01','2016-1-1','20yuan');[m
+[32m+[m[32minsert into book values('10001', 'ºìÂ¥ÃÎ','01','2016-1-1','20yuan');[m
+ insert into book values('10002', 'ÂæÍÕÏé×Ó','02','2016-1-2','20yuan');[m
+ insert into book values('10003', 'Î÷ÓÎ¼Ç','03','2016-1-3','30yuan');[m
+[31m-insert into author values('01', '¸ß¶û»ù','100','ËÕÁª');[m
+[32m+[m[32minsert into author values('01', '²ÜÑ©Çç','100','Ã÷³¯');[m
+ insert into author values('02', 'ÀÏÉá','80','ÖÐ¹ú');[m
+ insert into author values('03', 'Îâ³Ð¶÷','200','Ã÷³¯');[m
+\ No newline at end of file[m
+[1mdiff --git a/instruction1.txt b/instruction1.txt[m
+[1mindex 3f25e71..b305d27 100644[m
+[1m--- a/instruction1.txt[m
+[1m+++ b/instruction1.txt[m
+[36m@@ -10,7 +10,7 @@[m [mvoid getLCS();    ///[m
+ int main()[m
+ {[m
+     int i;[m
+[31m-    printf("ÊäÈëµÚÒ»¸ö×Ö·û´®£º\n");[m
+[32m+[m[32m    printf("please input the first string£º\n");[m
+     gets(a);[m
+     printf("ÊäÈëµÚ¶þ¸ö×Ö·û´®£º\n");[m
+     gets(b);[m
+[1mdiff --git a/instruction2.txt b/instruction2.txt[m
+[1mindex 3a1d59d..4480160 100644[m
+[1m--- a/instruction2.txt[m
+[1m+++ b/instruction2.txt[m
+[36m@@ -32,11 +32,11 @@[m [mpublic class Xfdata {[m
+         stat.executeUpdate("create table book(isbn char(20), title char(20),authorID char(3),publishdate char(20),price char(15))");[m
+         stat.executeUpdate("create table author(authoriD char(3),name char(10),age char(3),country char(20))") ;[m
+         [m
+[31m-        stat.executeUpdate("insert into book values('10001', 'ÎÒµÄ´óÑ§','01','2016-1-1','20yuan')");[m
+[31m-        stat.executeUpdate("insert into book values('10002', 'ÂæÍÕÏé×Ó','02','2016-1-2','20yuan')");[m
+[31m-        stat.executeUpdate("insert into book values('10003', 'Î÷ÓÎ¼Ç','03','2016-1-3','30yuan')");[m
+[32m+[m[32m        stat.executeUpdate("");[m
+[32m+[m[32m        stat.executeUpdate("");[m
+[32m+[m[32m        stat.executeUpdate("");[m
+         [m
+[31m-        stat.executeUpdate("insert into author values('01', '¸ß¶û»ù','100','ËÕÁª')");[m
+[32m+[m[32m        stat.executeUpdate("");[m
+         stat.executeUpdate("insert into author values('02', 'ÀÏÉá','80','ÖÐ¹ú')");[m
+         stat.executeUpdate("insert into author values('03', 'Îâ³Ð¶÷','200','Ã÷³¯')");[m
+         [m
+
+[33mcommit a0eda1dd4b6425bead123f85c404e3c2fb267ef1[m
+Author: xuefeng9463 <3094894243@qq.com>
+Date:   Sat Oct 15 17:17:18 2016 +0800
+
+    step2
+
+[1mdiff --git a/instruction.txt b/instruction.txt[m
+[1mnew file mode 100644[m
+[1mindex 0000000..259bdf0[m
+[1m--- /dev/null[m
+[1m+++ b/instruction.txt[m
+[36m@@ -0,0 +1,10 @@[m
+[32m+[m[32mdrop table if exists book;[m
+[32m+[m[32mdrop table if exists author;[m
+[32m+[m[32mcreate table book(isbn char(20), title char(20),authorID char(3),publishdate char(20),price char(15));[m
+[32m+[m[32mcreate table author(authoriD char(3),name char(10),age char(3),country char(20));[m
+[32m+[m[32minsert into book values('10001', 'ÎÒµÄ´óÑ§','01','2016-1-1','20yuan');[m
+[32m+[m[32minsert into book values('10002', 'ÂæÍÕÏé×Ó','02','2016-1-2','20yuan');[m
+[32m+[m[32minsert into book values('10003', 'Î÷ÓÎ¼Ç','03','2016-1-3','30yuan');[m
+[32m+[m[32minsert into author values('01', '¸ß¶û»ù','100','ËÕÁª');[m
+[32m+[m[32minsert into author values('02', 'ÀÏÉá','80','ÖÐ¹ú');[m
+[32m+[m[32minsert into author values('03', 'Îâ³Ð¶÷','200','Ã÷³¯');[m
+\ No newline at end of file[m
+[1mdiff --git a/instruction1.txt b/instruction1.txt[m
+[1mnew file mode 100644[m
+[1mindex 0000000..3f25e71[m
+[1m--- /dev/null[m
+[1m+++ b/instruction1.txt[m
+[36m@@ -0,0 +1,77 @@[m
+[32m+[m[32m#include<stdio.h>[m
+[32m+[m[32m#include<string.h>[m
+[32m+[m
+[32m+[m[32mchar a[500],b[500];[m
+[32m+[m[32mchar num[501][501]; ///¼ÇÂ¼ÖÐ¼ä½á¹ûµÄÊý×é[m
+[32m+[m[32mchar flag[501][501];    ///±ê¼ÇÊý×é£¬ÓÃÓÚ±êÊ¶ÏÂ±êµÄ×ßÏò£¬¹¹Ôì³ö¹«¹²×ÓÐòÁÐ[m
+[32m+[m[32mvoid LCS(); ///¶¯Ì¬¹æ»®Çó½â[m
+[32m+[m[32mvoid getLCS();    ///²ÉÓÃµ¹ÍÆ·½Ê½Çó×î³¤¹«¹²×ÓÐòÁÐ[m
+[32m+[m
+[32m+[m[32mint main()[m
+[32m+[m[32m{[m
+[32m+[m[32m    int i;[m
+[32m+[m[32m    printf("ÊäÈëµÚÒ»¸ö×Ö·û´®£º\n");[m
+[32m+[m[32m    gets(a);[m
+[32m+[m[32m    printf("ÊäÈëµÚ¶þ¸ö×Ö·û´®£º\n");[m
+[32m+[m[32m    gets(b);[m
+[32m+[m
+[32m+[m[32m    memset(num,0,sizeof(num));[m
+[32m+[m[32m    memset(flag,0,sizeof(flag));[m
+[32m+[m[32m    LCS();[m
+[32m+[m[32m    printf("×î³¤¹«¹²×ÓÐòÁÐ³¤¶È£º%d\n",num[strlen(a)][strlen(b)]);[m
+[32m+[m[32m    printf("×î³¤¹«¹²×ÓÐòÁÐÎª£º");[m
+[32m+[m[32m    getLCS();[m
+[32m+[m[32m    return 0;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mvoid LCS()[m
+[32m+[m[32m{[m
+[32m+[m[32m    int i,j;[m
+[32m+[m[32m    for(i=1;i<=strlen(a);i++)[m
+[32m+[m[32m    {[m
+[32m+[m[32m        for(j=1;j<=strlen(b);j++)[m
+[32m+[m[32m        {[m
+[32m+[m[32m            if(a[i-1]==b[j-1])   ///×¢ÒâÕâÀïµÄÏÂ±êÊÇi-1Óëj-1[m
+[32m+[m[32m            {[m
+[32m+[m[32m                num[i][j]=num[i-1][j-1]+1;[m
+[32m+[m[32m                flag[i][j]=1;  ///Ð±ÏòÏÂ±ê¼Ç[m
+[32m+[m[32m            }[m
+[32m+[m[32m            else if(num[i][j-1]>num[i-1][j])[m
+[32m+[m[32m            {[m
+[32m+[m[32m                num[i][j]=num[i][j-1];[m
+[32m+[m[32m                flag[i][j]=2;  ///ÏòÓÒ±ê¼Ç[m
+[32m+[m[32m            }[m
+[32m+[m[32m            else[m
+[32m+[m[32m            {[m
+[32m+[m[32m                num[i][j]=num[i-1][j];[m
+[32m+[m[32m                flag[i][j]=3;  ///ÏòÏÂ±ê¼Ç[m
+[32m+[m[32m            }[m
+[32m+[m[32m        }[m
+[32m+[m[32m    }[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mvoid getLCS()[m
+[32m+[m[32m{[m
+[32m+[m
+[32m+[m[32m    char res[500];[m
+[32m+[m[32m    int i=strlen(a);[m
+[32m+[m[32m    int j=strlen(b);[m
+[32m+[m[32m    int k=0;    ///ÓÃÓÚ±£´æ½á¹ûµÄÊý×é±êÖ¾Î»[m
+[32m+[m[32m    while(i>0 && j>0)[m
+[32m+[m[32m    {[m
+[32m+[m[32m        if(flag[i][j]==1)   ///Èç¹ûÊÇÐ±ÏòÏÂ±ê¼Ç[m
+[32m+[m[32m        {[m
+[32m+[m[32m            res[k]=a[i-1];[m
+[32m+[m[32m            k++;[m
+[32m+[m[32m            i--;[m
+[32m+[m[32m            j--;[m
+[32m+[m[32m        }[m
+[32m+[m[32m        else if(flag[i][j]==2)  ///Èç¹ûÊÇÐ±ÏòÓÒ±ê¼Ç[m
+[32m+[m[32m            j--;[m
+[32m+[m[32m        else if(flag[i][j]==3)  ///Èç¹ûÊÇÐ±ÏòÏÂ±ê¼Ç[m
+[32m+[m[32m            i--;[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    for(i=k-1;i>=0;i--)[m
+[32m+[m[32m        printf("%c",res[i]);[m
+[32m+[m[32m}[m
+[1mdiff --git a/instruction2.txt b/instruction2.txt[m
+[1mnew file mode 100644[m
+[1mindex 0000000..3a1d59d[m
+[1m--- /dev/null[m
+[1m+++ b/instruction2.txt[m
+[36m@@ -0,0 +1,48 @@[m
+[32m+[m[32mpackage com.tutorialspoint.struts2;[m
+[32m+[m[32mimport java.awt.print.Book;[m
+[32m+[m[32mimport java.sql.*;[m
+[32m+[m[32mimport java.sql.Connection;     //µ¼ÈëÊý¾Ý¿âÁ¬½Ó¶ÔÏó[m
+[32m+[m[32mimport java.sql.DriverManager;  //µ¼ÈëÊý¾Ý¿âÇý¶¯¹ÜÀí¶ÔÏó[m
+[32m+[m[32mimport java.sql.ResultSet;      //µ¼ÈëÊý¾Ý¼ÇÂ¼¼¯¶ÔÏó[m
+[32m+[m[32mimport java.sql.SQLException;   //µ¼ÈëÊý¾ÝSQL²Ù×÷Òì³£¶ÔÏó[m
+[32m+[m[32mimport java.sql.Statement;      //µ¼ÈëSQL²Ù×÷½Ó¿Ú¶ÔÏó[m
+[32m+[m[41m  [m
+[32m+[m[32mimport java.sql.DatabaseMetaData;[m[41m  [m
+[32m+[m[32mimport java.sql.Driver;[m[41m  [m
+[32m+[m[41m [m
+[32m+[m
+[32m+[m[32mimport java.util.Enumeration;[m[41m  [m
+[32m+[m[32mimport java.util.Vector;[m[41m  [m
+[32m+[m[32mpublic class Xfdata {[m[41m [m
+[32m+[m
+[32m+[m	[32mpublic static  void main(String[] args) throws Exception[m
+[32m+[m[32m    {[m
+[32m+[m[32m        Class.forName("com.mysql.jdbc.Driver");[m
+[32m+[m[41m         [m
+[32m+[m[41m       [m
+[32m+[m[32m        String url = "jdbc:mysql://localhost:3306/xfdata?useUnicode=true&characterEncoding=utf-8";[m[41m  [m
+[32m+[m[32m        Connection conn = DriverManager.getConnection(url, "root", "199463");[m
+[32m+[m[32m        Statement stat = conn.createStatement();[m
+[32m+[m[32m        ResultSet rs;[m
+[32m+[m[41m        [m
+[32m+[m[32m        stat.executeUpdate("drop table if exists book");[m
+[32m+[m[32m        stat.executeUpdate("drop table if exists author");[m
+[32m+[m[41m        [m
+[32m+[m[41m        [m
+[32m+[m[32m        stat.executeUpdate("create table book(isbn char(20), title char(20),authorID char(3),publishdate char(20),price char(15))");[m
+[32m+[m[32m        stat.executeUpdate("create table author(authoriD char(3),name char(10),age char(3),country char(20))") ;[m
+[32m+[m[41m        [m
+[32m+[m[32m        stat.executeUpdate("insert into book values('10001', 'ÎÒµÄ´óÑ§','01','2016-1-1','20yuan')");[m
+[32m+[m[32m        stat.executeUpdate("insert into book values('10002', 'ÂæÍÕÏé×Ó','02','2016-1-2','20yuan')");[m
+[32m+[m[32m        stat.executeUpdate("insert into book values('10003', 'Î÷ÓÎ¼Ç','03','2016-1-3','30yuan')");[m
+[32m+[m[41m        [m
+[32m+[m[32m        stat.executeUpdate("insert into author values('01', '¸ß¶û»ù','100','ËÕÁª')");[m
+[32m+[m[32m        stat.executeUpdate("insert into author values('02', 'ÀÏÉá','80','ÖÐ¹ú')");[m
+[32m+[m[32m        stat.executeUpdate("insert into author values('03', 'Îâ³Ð¶÷','200','Ã÷³¯')");[m
+[32m+[m[41m        [m
+[32m+[m[41m      [m
+[32m+[m[41m       [m
+[32m+[m[32m        stat.close();[m
+[32m+[m[32m        conn.close();[m
+[32m+[m[32m    }[m
+[32m+[m	[32m}[m
+
+[33mcommit 03f49044ef733bb8e72103928c9a3beb8f5dad40[m
+Author: xuefeng9463 <3094894243@qq.com>
+Date:   Fri Oct 14 23:46:52 2016 +0800
+
+    step1
+
+[1mdiff --git a/src/protest2/Test.java b/src/protest2/Test.java[m
+[1mindex efb07ea..1b9f7d6 100644[m
+[1m--- a/src/protest2/Test.java[m
+[1m+++ b/src/protest2/Test.java[m
+[36m@@ -36,7 +36,7 @@[m [mclass simplify//[m
+ 							return n;[m
+ 				[m
+ 			}[m
+[31m-			//Çóµ¼ÔËËã¡£[m
+[32m+[m			[32m//Çóµ¼ÔËËã[m
+ 		else if((str.indexOf("!simplify")==-1)&&(str.indexOf("!d/d")!=-1))[m
+ 			{ 				[m
+ 							String o=new String();[m
+
+[33mcommit 31ceee714d915ac1a0e32cd4da3d90fd8766be48[m
+Author: xuefeng9463 <3094894243@qq.com>
+Date:   Fri Oct 14 23:45:51 2016 +0800
+
+    init
+
+[1mdiff --git a/.classpath b/.classpath[m
+[1mnew file mode 100644[m
+[1mindex 0000000..fb50116[m
+[1m--- /dev/null[m
+[1m+++ b/.classpath[m
+[36m@@ -0,0 +1,6 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
+[32m+[m[32m<classpath>[m
+[32m+[m	[32m<classpathentry kind="src" path="src"/>[m
+[32m+[m	[32m<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>[m
+[32m+[m	[32m<classpathentry kind="output" path="bin"/>[m
+[32m+[m[32m</classpath>[m
+[1mdiff --git a/.project b/.project[m
+[1mnew file mode 100644[m
+[1mindex 0000000..90d934d[m
+[1m--- /dev/null[m
+[1m+++ b/.project[m
+[36m@@ -0,0 +1,17 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
+[32m+[m[32m<projectDescription>[m
+[32m+[m	[32m<name>protest2</name>[m
+[32m+[m	[32m<comment></comment>[m
+[32m+[m	[32m<projects>[m
+[32m+[m	[32m</projects>[m
+[32m+[m	[32m<buildSpec>[m
+[32m+[m		[32m<buildCommand>[m
+[32m+[m			[32m<name>org.eclipse.jdt.core.javabuilder</name>[m
+[32m+[m			[32m<arguments>[m
+[32m+[m			[32m</arguments>[m
+[32m+[m		[32m</buildCommand>[m
+[32m+[m	[32m</buildSpec>[m
+[32m+[m	[32m<natures>[m
+[32m+[m		[32m<nature>org.eclipse.jdt.core.javanature</nature>[m
+[32m+[m	[32m</natures>[m
+[32m+[m[32m</projectDescription>[m
+[1mdiff --git a/bin/protest2/Exspression.class b/bin/protest2/Exspression.class[m
+[1mnew file mode 100644[m
+[1mindex 0000000..971d155[m
+Binary files /dev/null and b/bin/protest2/Exspression.class differ
+[1mdiff --git a/bin/protest2/Test.class b/bin/protest2/Test.class[m
+[1mnew file mode 100644[m
+[1mindex 0000000..f978acf[m
+Binary files /dev/null and b/bin/protest2/Test.class differ
+[1mdiff --git a/bin/protest2/simplify.class b/bin/protest2/simplify.class[m
+[1mnew file mode 100644[m
+[1mindex 0000000..eed18e6[m
+Binary files /dev/null and b/bin/protest2/simplify.class differ
+[1mdiff --git a/src/protest2/Test.java b/src/protest2/Test.java[m
+[1mnew file mode 100644[m
+[1mindex 0000000..efb07ea[m
+[1m--- /dev/null[m
+[1m+++ b/src/protest2/Test.java[m
+[36m@@ -0,0 +1,139 @@[m
+[32m+[m[32mpackage protest2;[m
+[32m+[m[32mimport java.util.Scanner;[m[41m [m
+[32m+[m
+[32m+[m[32mclass Exspression //´æ´¢ÊäÈëµÄ×Ö·û´®[m
+[32m+[m[32m{		StringBuffer a;[m
+[32m+[m[41m		[m
+[32m+[m	[32mpublic StringBuffer in()[m
+[32m+[m	[32m{	Scanner input=new Scanner(System.in);[m
+[32m+[m		[32mStringBuffer a=new StringBuffer();[m
+[32m+[m		[32ma.append(input.nextLine());[m
+[32m+[m
+[32m+[m		[32mreturn a;[m
+[32m+[m	[32m}[m
+[32m+[m[41m	[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mclass simplify//´¦Àí¶àÏîÊ½½øÐÐ´úÖµ£¬Çóµ¼¡£[m
+[32m+[m[32m{		StringBuffer m;[m
+[32m+[m	[32mpublic	String out(StringBuffer str)[m
+[32m+[m	[32m{[m[41m		[m
+[32m+[m[41m			[m
+[32m+[m[41m		[m
+[32m+[m			[32m//ÊäÈë¶àÏîÊ½[m
+[32m+[m		[32mif((str.indexOf("!simplify")==-1)&&(str.indexOf("!d/d")==-1))[m
+[32m+[m			[32m{[m
+[32m+[m							[32m//str.in();[m[41m [m
+[32m+[m							[32mm = new StringBuffer(str);[m
+[32m+[m							[32mreturn str.toString();[m
+[32m+[m			[32m}[m
+[32m+[m[41m		[m
+[32m+[m			[32m//´úÖµÔËËã[m
+[32m+[m		[32melse if((str.indexOf("!simplify")!=-1)&&(str.indexOf("!d/d")==-1))[m
+[32m+[m			[32m{				String n=new String();[m
+[32m+[m							[32mn=m.toString().replace(str.toString().toCharArray()[10],[m
+[32m+[m								[32mstr.toString().toCharArray()[12]);[m
+[32m+[m							[32mreturn n;[m
+[32m+[m[41m				[m
+[32m+[m			[32m}[m
+[32m+[m			[32m//Çóµ¼ÔËËã¡£[m
+[32m+[m		[32melse if((str.indexOf("!simplify")==-1)&&(str.indexOf("!d/d")!=-1))[m
+[32m+[m			[32m{[m[41m 				[m
+[32m+[m							[32mString o=new String();[m
+[32m+[m							[32mString fstr[]=new String[10];[m
+[32m+[m							[32mint q1=0;[m
+[32m+[m							[32mStringBuffer w=new StringBuffer();[m
+[32m+[m							[32mStringBuffer wout=new StringBuffer();[m
+[32m+[m							[32mo=m.toString();[m
+[32m+[m[41m							[m
+[32m+[m					[32mfor(int i=0;i<=o.length();i++)[m
+[32m+[m					[32m{[m[41m		[m
+[32m+[m						[32mif(i==o.length()){[m
+[32m+[m							[32mfstr[q1]=w.toString();[m
+[32m+[m							[32mw.setLength(0);[m
+[32m+[m							[32mq1++;[m
+[32m+[m						[32m}[m
+[32m+[m						[32melse if(o.toCharArray()[i]!='+')[m
+[32m+[m						[32m{[m
+[32m+[m							[32mw.append(o.toCharArray()[i]);[m
+[32m+[m						[32m}[m
+[32m+[m						[32melse[m
+[32m+[m						[32m{[m[41m	[m
+[32m+[m							[32mfstr[q1]=w.toString();[m
+[32m+[m							[32mw.setLength(0);[m
+[32m+[m							[32mq1++;[m
+[32m+[m						[32m}[m
+[32m+[m					[32m}[m
+[32m+[m[41m					[m
+[32m+[m					[32mboolean flag=false;[m
+[32m+[m					[32mfor(int j=0;j<q1;j++)[m
+[32m+[m					[32m{[m[41m		[m
+[32m+[m							[32mint q2=0;[m
+[32m+[m[41m					[m
+[32m+[m							[32mfor(int d=0;d<fstr[j].length();d++)[m
+[32m+[m							[32m{[m[41m	[m
+[32m+[m								[32mif(fstr[j].toCharArray()[d]==str.toString().toCharArray()[4])[m
+[32m+[m								[32m{[m
+[32m+[m									[32mq2++;[m
+[32m+[m								[32m}[m
+[32m+[m							[32m}[m
+[32m+[m							[32mif(q2>0)[m
+[32m+[m							[32m{[m
+[32m+[m								[32mflag=true;[m
+[32m+[m								[32mfor(int d=0;d<fstr[j].length();d++)[m
+[32m+[m								[32m{[m[41m	[m
+[32m+[m									[32mif(fstr[j].toCharArray()[d]==str.toString().toCharArray()[4])[m
+[32m+[m									[32m{[m
+[32m+[m[4
