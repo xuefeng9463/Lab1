@@ -61,7 +61,8 @@ class Simplify {
 				}
 			}
 			boolean flag = false;
-			for (int j = 0; j < numOfAdd; j++) {		
+			for (int j = 0; j < numOfAdd; j++) 
+			{		
 				int numOfVar = 0;
 				for (int d = 0; d < fstr[j].length(); d++) {	
 					if (fstr[j].toCharArray()[d] 
